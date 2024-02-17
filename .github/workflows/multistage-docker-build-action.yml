@@ -35,8 +35,7 @@ jobs:
       - uses: firehed/multistage-docker-build-action@v1
         id: build
         with:
-          context: ./rusty-fedora.container
-          dockerfile: rusty-fedora.container/Containerfile
+          dockerfile: Containerfile
           repository: ${{ env.IMAGE_REGISTRY }}
           stages: builder
           server-stage: fedora-oxidized.toolbox

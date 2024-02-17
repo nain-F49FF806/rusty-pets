@@ -3,7 +3,7 @@ FROM rust:latest as builder
 # Required for starship
 RUN apt update && apt install -y cmake
 
-COPY useful-crates /
+COPY useful-crates /useful-crates
 RUN cargo install $(cat useful-crates)
 RUN rm /useful-crates
 
@@ -24,4 +24,4 @@ RUN mkdir -p /opt/cargo/bin
 COPY --from=builder /usr/local/cargo/bin/* /opt/cargo/bin/
 ENV PATH=/opt/cargo/bin:$PATH 
 
-COPY profile.d/* /etc/profile.d/
+COPY customization/rusty-fedora/profile.d/* /etc/profile.d/
