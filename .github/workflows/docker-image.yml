@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: cd rusty-fedora.container && docker build . --file Containerfile --tag rusty-fedora:$(date +%s)
+      run: docker build .  --tag rusty-pets-ci-debug:$(date +%s)
