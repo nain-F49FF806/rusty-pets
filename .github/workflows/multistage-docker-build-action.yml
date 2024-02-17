@@ -1,0 +1,43 @@
+name: Multi stage build and publish
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+    IMAGE_REGISTRY: ghcr.io/${{ github.repository }}
+
+jobs:
+  build-and-publish:
+    name: Build and publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # This step MUST be performed before multistage-docker-build
+      - name: Auth to GH registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+
+      - name: lowercase IMAGE_REGISTRY
+        run: |
+          echo "IMAGE_REGISTRY=${IMAGE_REGISTRY@L}" >> ${GITHUB_ENV}
+
+      - uses: firehed/multistage-docker-build-action@v1
+        id: build
+        with:
+          context: ./rusty-fedora.container
+          dockerfile: rusty-fedora.container/Containerfile
+          repository: ${{ env.IMAGE_REGISTRY }}
+          stages: builder
+          server-stage: fedora-oxidized.toolbox
+
