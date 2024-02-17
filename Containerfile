@@ -12,13 +12,16 @@ FROM quay.io/toolbx-images/fedora-toolbox:39 as fedora-oxidized.toolbox
 
 ARG NAME=fedora-oxidized.toolbox
 ARG VERSION=39
+ARG USAGE="This image is meant to be used with the toolbx or distrobox command"
+ARG SUMMARY="Rusted image based on Fedora Toolbox base container"
 LABEL com.github.containers.toolbox="true" \
       com.redhat.component="$NAME" \
       name="$NAME" \
       version="$VERSION" \
-      usage="This image is meant to be used with the toolbx or distrobox command" \
-      summary="Rusted image based on Fedora Toolbox base container" \
+      usage="$USAGE" \
+      summary="$SUMMARY" \
       maintainer="nain <no-reply@you-are-on-your-own-for-now.alt>"
+LABEL org.opencontainers.image.description "${SUMMARY}. ${USAGE}"
 
 # Pull in useful rust tools
 ## https://doc.rust-lang.org/stable/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
