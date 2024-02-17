@@ -20,8 +20,10 @@ LABEL com.github.containers.toolbox="true" \
       summary="Rusted image based on Fedora Toolbox base container" \
       maintainer="nain <no-reply@you-are-on-your-own-for-now.alt>"
 
-RUN mkdir -p /opt/cargo/bin
-COPY --from=builder /usr/local/cargo/bin/* /opt/cargo/bin/
+# Pull in useful rust tools
+## https://doc.rust-lang.org/stable/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
+## If you wish to cache binaries installed with cargo install, you need to cache the bin/ folder and the .crates.toml and .crates2.json files.
+COPY --from=builder /usr/local/cargo/bin/ /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH 
 
 COPY customization/rusty-fedora/profile.d/* /etc/profile.d/
