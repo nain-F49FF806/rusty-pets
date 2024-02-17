@@ -1,6 +1,6 @@
 FROM rust:latest as builder
 
-# Required for starship
+# Required for building starship
 RUN apt update && apt install -y cmake
 
 COPY useful-crates /useful-crates
