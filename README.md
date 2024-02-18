@@ -1,16 +1,21 @@
 # rusty-pets
 
+## About
+
 Have you heard of pet containers?
 
 [![Stop Distro Hopping! Use this AWESOME tool on Linux](https://img.youtube.com/vi/Sj064D9ZUl8/0.jpg)](https://www.youtube.com/watch?v=Sj064D9ZUl8)
 
-Here are recipes for creating your perfect supercharged container images for use with toolbx/distrobox.
+Here are recipes for creating your perfect supercharged container images for use with _toolbx_/_distrobox_.
 What is the special ingredient that goes into these powerful images?
 The Chemical X - it's Rust!
 
 Forged in fires of `cargo` these containers go through an intense build process, supercharging them
 with sparkling Rust utils. Some of them enhance your regular shell experience and others unlock new abilities.  
 You too wish to discover these oxidised powers, yes ;) ? See instruction below to find out how.
+
+> [!TIP]  
+> TL;DR: This repo provides _Toolbox_/_Distrobox_ compatible distro images featuring Rust powered tools.
 
 
 ## How to play
