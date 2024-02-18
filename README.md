@@ -7,11 +7,11 @@ What is the special ingredient used to make these powerful images?
 The Chemical X - it's Rust!
 
 Forged in fires of `cargo` these containers go through an intense build process, supercharging them
-with sparkling Rust utils. Some of them enhance your regular shell experience and others unlock new abilities.
+with sparkling Rust utils. Some of them enhance your regular shell experience and others unlock new abilities.  
 You too wish to discover these oxidised powers, yes ;) ? See instruction below to find out how.
 
-## How to play
 
+## How to play
 
 You can use these containers with Docker or Podman directly, but you'll have a much better experience
 with tools like distrobox/toolbx which neatly wrap the former for convenience.
@@ -36,3 +36,26 @@ distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbo
 distrobox enter fedoraX-39
 ```
 
+
+## What is included?
+
+| Tool              | Like           | Aliased | Notes | Category          |
+| :---------------- | :------------- | :------ | :---- | :---------------- |
+| bat               | cat, less      | cat     |       | viewer/navigation |
+| eza               | ls             | ls      |       | viewer/navigation |
+| zoxide (zd)       | cd             |         |       | viewer/navigation |
+| Yazi-fm (yazi)    | nnn            |         |       | viewer/navigation |
+| hexyl             | hexdump        |         |       | viewer/navigation |
+| bingrep           | ?              |         |       | viewer/navigation |
+| bottom (btm)      | top, htop      | top     |       | process/system    |
+| du-dust (dust)    | du             | du      |       | process/system    |
+| hyperfine         | time           |         |       | process/system    |
+| fd-find (fd)      | find           |         |       | file manipulation |
+| ouch              | tar,gz,xz,zstd |         |       | file manipulation |
+| ripgrep           | grep           |         |       | file manipulation |
+| xsv               | ?              |         |       | file manipulation |
+| git-delta (delta) | diff           |         |       | CVS               |
+| gitui             | ?              |         |       | CVS               |
+| nu                | bash,zsh,fish  |         |       |                   |
+| starship          | Liquid-prompt  |         |       |                   |
+| watchexec-cli     | watchman       |         |       |                   |
