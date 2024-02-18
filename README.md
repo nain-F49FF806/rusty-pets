@@ -82,6 +82,21 @@ distrobox enter fedoraX-39
 [starship]: https://github.ink/starship/starship
 [watchexec-cli]: https://github.com/watchexec/watchexec
 
+### Inclusion Criteria
+
+| Spirit      | Measurement                                                                                       |
+|:------------|---------------------------------------------------------------------------------------------------|
+| Wide appeal | Have many stars. ~1K+ is good rule of thumb but new or niche-popular tools may also be considered |
+| Maintained  | Update in last year. Either in code repo or a statement by author on any channel                  |
+| FOSS        | Free and Open Source Licence (Either [OSI list] or [FSF list])                                    |
+
+[OSI list]: https://opensource.org/licenses/
+[FSF list]: https://www.gnu.org/licenses/license-list.html
+
+> [!NOTE]  
+> Measurements can be falliable, let the spirit of the criteria guide us.
+
+
 ## Todo / Wishlist
 
 - [ ] Popular distro triad
@@ -100,3 +115,24 @@ distrobox enter fedoraX-39
   - [x] find?
   - [x] diff?
   - [ ] watchman 
+
+
+## License
+
+Licensed under either of
+
+ * Apache License, Version 2.0
+   (http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license
+   (http://opensource.org/licenses/MIT)
+
+at your option.
+
+`SPDX-License-Identifier: Apache-2.0 OR MIT`
+
+
+## Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
+dual licensed as above, without any additional terms or conditions.
