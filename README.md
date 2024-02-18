@@ -60,3 +60,22 @@ distrobox enter fedoraX-39
 | nu                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
 | starship          | Liquid-prompt  |         | Customizable prompt for any shell!                       |                   |
 | watchexec-cli     | watchman       |         | Executes commands in response to file modifications      |                   |
+
+
+## Todo / Wishlist
+
+- [ ] Popular distro triad
+  - [x] Image for Fedora
+  - [ ] Image for Ubuntu
+  - [ ] Image for Arch
+- [ ] More Rust tools
+  - [ ] Helix editor
+  - [ ] Rage
+  - [ ] Zellij
+  - [ ] ?
+- [ ] More aliases
+  - [ ] time?
+  - [ ] grep?
+  - [ ] hexdump?
+  - [ ] find?
+  - [ ] diff?
