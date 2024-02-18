@@ -48,16 +48,16 @@ distrobox enter fedoraX-39
 | eza               | ls             | ls      |                                                          | viewer/navigation |
 | zoxide (zd)       | cd             |         |                                                          | viewer/navigation |
 | Yazi-fm (yazi)    | nnn            |         | Blazing fast terminal file manager, based on async I/O   | viewer/navigation |
-| hexyl             | hexdump        |         |                                                          | viewer/navigation |
+| hexyl             | hexdump        | hexdump |                                                          | viewer/navigation |
 | bingrep           | ?              |         | Cross-platform binary parsing viewer                     | viewer/navigation |
 | bottom (btm)      | top, htop      | top     |                                                          | process/system    |
 | du-dust (dust)    | du             | du      |                                                          | process/system    |
-| hyperfine         | time           |         |                                                          | process/system    |
-| fd-find (fd)      | find           |         |                                                          | file manipulation |
+| hyperfine         | time           | time    |                                                          | process/system    |
+| fd-find (fd)      | find           | find    |                                                          | file manipulation |
 | ouch              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper.  | file manipulation |
-| ripgrep           | grep           |         |                                                          | file manipulation |
+| ripgrep (rg)      | grep           | grep    |                                                          | file manipulation |
 | xsv               | csvkit         |         | A fast CSV command line toolkit written in Rust.         | file manipulation |
-| git-delta (delta) | diff           |         | Syntax-highlighting pager for git, diff, and grep output | CVS               |
+| git-delta (delta) | diff           | diff    | Syntax-highlighting pager for git, diff, and grep output | CVS               |
 | gitui             | ?              |         | Blazing 💥 fast terminal-ui for git                      | CVS               |
 | nu                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
 | starship          | Liquid-prompt  |         | Customizable prompt for any shell!                       |                   |
@@ -76,8 +76,8 @@ distrobox enter fedoraX-39
   - [ ] Zellij
   - [ ] ?
 - [ ] More aliases
-  - [ ] time?
-  - [ ] grep?
-  - [ ] hexdump?
-  - [ ] find?
-  - [ ] diff?
+  - [x] time?
+  - [x] grep?
+  - [x] hexdump?
+  - [x] find?
+  - [x] diff?
