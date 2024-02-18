@@ -2,10 +2,10 @@
 
 Have you heard of pet containers?
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sj064D9ZUl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Stop Distro Hopping! Use this AWESOME tool on Linux](https://img.youtube.com/vi/Sj064D9ZUl8/0.jpg)](https://www.youtube.com/watch?v=Sj064D9ZUl8)
 
-These here are recipes for creating your perfect container images for use with toolbx/distrobox.
-What is the special ingredient used to make these powerful images?
+Here are recipes for creating your perfect supercharged container images for use with toolbx/distrobox.
+What is the special ingredient that goes into these powerful images?
 The Chemical X - it's Rust!
 
 Forged in fires of `cargo` these containers go through an intense build process, supercharging them
@@ -32,7 +32,7 @@ Links: {[Distrobox install]} {[Toolbx install]}
 ### Example usage
 
 ```bash
-## Create a container with rusty-pets' oxidised toolbox image (only need to do this once)
+## Create a container with any rusty-pets oxidised image (only need to do this once)
 distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbox:latest --name fedoraX-39
 
 ## Enter the created container (whenever you please)
