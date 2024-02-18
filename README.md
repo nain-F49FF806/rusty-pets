@@ -42,27 +42,45 @@ distrobox enter fedoraX-39
 
 ## What is included?
 
-| Tool              | Like           | Aliased | Notes                                                    | Category          |
-|:------------------|:---------------|:--------|:---------------------------------------------------------|:------------------|
-| bat               | cat, less      | cat     |                                                          | viewer/navigation |
-| eza               | ls             | ls      |                                                          | viewer/navigation |
-| zoxide (zd)       | cd             |         |                                                          | viewer/navigation |
-| Yazi-fm (yazi)    | nnn            |         | Blazing fast terminal file manager, based on async I/O   | viewer/navigation |
-| hexyl             | hexdump        | hexdump |                                                          | viewer/navigation |
-| bingrep           | ?              |         | Cross-platform binary parsing viewer                     | viewer/navigation |
-| bottom (btm)      | top, htop      | top     |                                                          | process/system    |
-| du-dust (dust)    | du             | du      |                                                          | process/system    |
-| hyperfine         | time           | time    |                                                          | process/system    |
-| fd-find (fd)      | find           | find    |                                                          | file manipulation |
-| ouch              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper.  | file manipulation |
-| ripgrep (rg)      | grep           | grep    |                                                          | file manipulation |
-| xsv               | csvkit         |         | A fast CSV command line toolkit written in Rust.         | file manipulation |
-| git-delta (delta) | diff           | diff    | Syntax-highlighting pager for git, diff, and grep output | CVS               |
-| gitui             | ?              |         | Blazing 💥 fast terminal-ui for git                      | CVS               |
-| nu                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
-| starship          | Liquid-prompt  |         | Customizable prompt for any shell!                       |                   |
-| watchexec-cli     | watchman       |         | Executes commands in response to file modifications      |                   |
+| Rust Tool           | Like           | Aliased | Notes                                                    | Category          |
+|:--------------------|:---------------|:--------|:---------------------------------------------------------|:------------------|
+| [bat]               | cat, less      | cat     |                                                          | viewer/navigation |
+| [eza]               | ls             | ls      |                                                          | viewer/navigation |
+| [zoxide] (zd)      | cd             |         |                                                          | viewer/navigation |
+| [Yazi-fm] (yazi)    | nnn            |         | Blazing fast terminal file manager, based on async I/O   | viewer/navigation |
+| [hexyl]             | hexdump        | hexdump |                                                          | viewer/navigation |
+| [bingrep]           | ?              |         | Cross-platform binary parsing viewer                     | viewer/navigation |
+| [bottom] (btm)      | top, htop      | top     |                                                          | process/system    |
+| [du-dust] (dust)    | du             | du      |                                                          | process/system    |
+| [hyperfine]         | time           | time    |                                                          | process/system    |
+| [fd-find] (fd)      | find           | find    |                                                          | file manipulation |
+| [ouch]              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper.  | file manipulation |
+| [ripgrep] (rg)      | grep           | grep    |                                                          | file manipulation |
+| [xsv]               | csvkit         |         | A fast CSV command line toolkit written in Rust.         | file manipulation |
+| [git-delta] (delta) | diff           | diff    | Syntax-highlighting pager for git, diff, and grep output | CVS               |
+| [gitui]             | ?              |         | Blazing 💥 fast terminal-ui for git                      | CVS               |
+| [nu]                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
+| [starship]          | Liquid-prompt  |         | Customizable prompt for any shell!                       |                   |
+| [watchexec-cli]     | watchman       |         | Executes commands in response to file modifications      |                   |
 
+[bat]: https://github.com/sharkdp/bat
+[eza]: https://github.com/eza-community/eza
+[zoxide]: https://github.com/ajeetdsouza/zoxide
+[Yazi-fm]: https://github.com/sxyazi/yazi
+[hexyl]: https://github.com/sharkdp/hexyl
+[bingrep]: https://github.com/m4b/bingrep
+[bottom]: https://github.com/ClementTsang/bottom
+[du-dust]: https://github.com/bootandy/dust
+[hyperfine]: https://github.com/sharkdp/hyperfine
+[fd-find]: https://github.com/sharkdp/fd
+[ouch]: https://github.com/ouch-org/ouch
+[ripgrep]: https://github.com/BurntSushi/ripgrep
+[xsv]: https://github.com/BurntSushi/xsv
+[git-delta]: https://github.com/dandavison/delta
+[gitui]: https://github.com/extrawurst/gitui
+[nu]: https://github.com/nushell/nushell
+[starship]: https://github.ink/starship/starship
+[watchexec-cli]: https://github.com/watchexec/watchexec
 
 ## Todo / Wishlist
 
@@ -81,3 +99,4 @@ distrobox enter fedoraX-39
   - [x] hexdump?
   - [x] find?
   - [x] diff?
+  - [ ] watchman 
