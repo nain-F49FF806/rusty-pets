@@ -1,8 +1,10 @@
 # rusty-pets
 
 Have you heard of pet containers?
-These here are recipes for creating your perfect container images for use with toolbx/distrobox.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sj064D9ZUl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+These here are recipes for creating your perfect container images for use with toolbx/distrobox.
 What is the special ingredient used to make these powerful images?
 The Chemical X - it's Rust!
 
