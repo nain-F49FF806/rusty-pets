@@ -1,7 +1,7 @@
 # rusty-pets
 
 Have you heard of pet containers?
-These here are recipes for creating your perfect container for use with toolbx/distrobox.
+These here are recipes for creating your perfect container images for use with toolbx/distrobox.
 
 What is the special ingredient used to make these powerful images?
 The Chemical X - it's Rust!
@@ -13,10 +13,12 @@ You too wish to discover these oxidised powers, yes ;) ? See instruction below t
 
 ## How to play
 
-You can use these containers with Docker or Podman directly, but you'll have a much better experience
-with tools like distrobox/toolbx which neatly wrap the former for convenience.
+### Installation
 
-Install [distrobox] or [toolbx] according to install instructions on respective page.
+You can use these container images with Docker or Podman directly. But you'll have a much better experience
+with tools like distrobox/toolbx which neatly wrap the former for convenient local pet container usage.
+
+Install [distrobox] or [toolbx] according to install instructions on respective project page.
 We recommend distrobox, since it is supported on various host distributions and is easier to customize.  
 Links: {[Distrobox install]} {[Toolbx install]}
 
@@ -24,7 +26,6 @@ Links: {[Distrobox install]} {[Toolbx install]}
 [toolbx]: https://containertoolbx.org/
 [Distrobox install]: https://github.com/89luca89/distrobox?tab=readme-ov-file#installation
 [Toolbx install]: https://containertoolbx.org/install/
-
 
 ### Example usage
 
@@ -39,23 +40,23 @@ distrobox enter fedoraX-39
 
 ## What is included?
 
-| Tool              | Like           | Aliased | Notes | Category          |
-| :---------------- | :------------- | :------ | :---- | :---------------- |
-| bat               | cat, less      | cat     |       | viewer/navigation |
-| eza               | ls             | ls      |       | viewer/navigation |
-| zoxide (zd)       | cd             |         |       | viewer/navigation |
-| Yazi-fm (yazi)    | nnn            |         |       | viewer/navigation |
-| hexyl             | hexdump        |         |       | viewer/navigation |
-| bingrep           | ?              |         |       | viewer/navigation |
-| bottom (btm)      | top, htop      | top     |       | process/system    |
-| du-dust (dust)    | du             | du      |       | process/system    |
-| hyperfine         | time           |         |       | process/system    |
-| fd-find (fd)      | find           |         |       | file manipulation |
-| ouch              | tar,gz,xz,zstd |         |       | file manipulation |
-| ripgrep           | grep           |         |       | file manipulation |
-| xsv               | ?              |         |       | file manipulation |
-| git-delta (delta) | diff           |         |       | CVS               |
-| gitui             | ?              |         |       | CVS               |
-| nu                | bash,zsh,fish  |         |       |                   |
-| starship          | Liquid-prompt  |         |       |                   |
-| watchexec-cli     | watchman       |         |       |                   |
+| Tool              | Like           | Aliased | Notes                                                    | Category          |
+|:------------------|:---------------|:--------|:---------------------------------------------------------|:------------------|
+| bat               | cat, less      | cat     |                                                          | viewer/navigation |
+| eza               | ls             | ls      |                                                          | viewer/navigation |
+| zoxide (zd)       | cd             |         |                                                          | viewer/navigation |
+| Yazi-fm (yazi)    | nnn            |         | Blazing fast terminal file manager, based on async I/O   | viewer/navigation |
+| hexyl             | hexdump        |         |                                                          | viewer/navigation |
+| bingrep           | ?              |         | Cross-platform binary parsing viewer                     | viewer/navigation |
+| bottom (btm)      | top, htop      | top     |                                                          | process/system    |
+| du-dust (dust)    | du             | du      |                                                          | process/system    |
+| hyperfine         | time           |         |                                                          | process/system    |
+| fd-find (fd)      | find           |         |                                                          | file manipulation |
+| ouch              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper.  | file manipulation |
+| ripgrep           | grep           |         |                                                          | file manipulation |
+| xsv               | csvkit         |         | A fast CSV command line toolkit written in Rust.         | file manipulation |
+| git-delta (delta) | diff           |         | Syntax-highlighting pager for git, diff, and grep output | CVS               |
+| gitui             | ?              |         | Blazing 💥 fast terminal-ui for git                      | CVS               |
+| nu                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
+| starship          | Liquid-prompt  |         | Customizable prompt for any shell!                       |                   |
+| watchexec-cli     | watchman       |         | Executes commands in response to file modifications      |                   |
