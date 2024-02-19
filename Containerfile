@@ -8,7 +8,8 @@ RUN cargo install $(cat useful-crates)
 RUN rm /useful-crates
 
 
-FROM quay.io/toolbx-images/fedora-toolbox:39 as fedora-oxidized.toolbox
+# --- Fedora ---
+FROM registry.fedoraproject.org/fedora-toolbox:39 as fedora-oxidized.toolbox
 
 ARG NAME=fedora-oxidized.toolbox
 ARG VERSION=39
