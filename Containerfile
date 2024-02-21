@@ -29,9 +29,10 @@ LABEL org.opencontainers.image.description "${SUMMARY}. ${USAGE}"
 ## If you wish to cache binaries installed with cargo install, you need to cache the bin/ folder and the .crates.toml and .crates2.json files.
 COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
-ENV PATH=/opt/cargo/bin:$PATH 
+ENV PATH=/opt/cargo/bin:$PATH
 
-COPY customization/rusty-fedora/profile.d/* /etc/profile.d/
+COPY customization/rusty-fedora/opt/cargo/bin/* /opt/cargo/bin/
+COPY customization/rusty-fedora/etc/profile.d/* /etc/profile.d/
 
 
 # --- Ubuntu ---
@@ -57,7 +58,8 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH 
 
-COPY customization/rusty-ubuntu/profile.d/* /etc/profile.d/
+COPY customization/rusty-ubuntu/opt/cargo/bin/* /opt/cargo/bin/
+COPY customization/rusty-ubuntu/etc/profile.d/* /etc/profile.d/
 
 
 # --- Arch ---
@@ -83,4 +85,5 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH 
 
-COPY customization/rusty-arch/profile.d/* /etc/profile.d/
+COPY customization/rusty-arch/opt/cargo/bin/* /opt/cargo/bin/
+COPY customization/rusty-arch/etc/profile.d/* /etc/profile.d/
