@@ -31,8 +31,8 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH
 
-COPY customization/rusty-fedora/opt/cargo/bin/* /opt/cargo/bin/
-COPY customization/rusty-fedora/etc/profile.d/* /etc/profile.d/
+COPY customization/rusty-fedora/opt/cargo/bin/ /opt/cargo/bin/
+COPY customization/rusty-fedora/etc/profile.d/ /etc/profile.d/
 
 
 # --- Ubuntu ---
