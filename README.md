@@ -62,17 +62,19 @@ distrobox enter archX
 |:--------------------|:---------------|:--------|:---------------------------------------------------------|:------------------|
 | [bat]               | cat, less      | cat     |                                                          | viewer/navigation |
 | [eza]               | ls             | ls      |                                                          | viewer/navigation |
-| [zoxide] (zd)      | cd             |         |                                                          | viewer/navigation |
+| [zoxide] (zd)       | cd             |         |                                                          | viewer/navigation |
 | [Yazi-fm] (yazi)    | nnn            |         | Blazing fast terminal file manager, based on async I/O   | viewer/navigation |
 | [hexyl]             | hexdump        | hexdump |                                                          | viewer/navigation |
 | [bingrep]           | ?              |         | Cross-platform binary parsing viewer                     | viewer/navigation |
 | [bottom] (btm)      | top, htop      | top     |                                                          | process/system    |
 | [du-dust] (dust)    | du             | du      |                                                          | process/system    |
 | [hyperfine]         | time           | time    |                                                          | process/system    |
+| [zellij]            | tmux           |         | A terminal workspace with batteries included             | process/system    |
 | [fd-find] (fd)      | find           | find    |                                                          | file manipulation |
-| [ouch]              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper.  | file manipulation |
+| [ouch]              | tar,gz,xz,zstd |         | Obvious Unified Compression (and decompression) Helper   | file manipulation |
 | [ripgrep] (rg)      | grep           | grep    |                                                          | file manipulation |
-| [xsv]               | csvkit         |         | A fast CSV command line toolkit written in Rust.         | file manipulation |
+| [xsv]               | csvkit         |         | A fast CSV command line toolkit written in Rust          | file manipulation |
+| [rage]              | age            |         | A simple, modern and secure file encryption tool         | file manipulation |
 | [git-delta] (delta) | diff           | diff    | Syntax-highlighting pager for git, diff, and grep output | CVS               |
 | [gitui]             | ?              |         | Blazing 💥 fast terminal-ui for git                      | CVS               |
 | [nu]                | bash,zsh,fish  |         | New type of shell, with structured data pipelines        |                   |
@@ -97,6 +99,8 @@ distrobox enter archX
 [nu]: https://github.com/nushell/nushell
 [starship]: https://github.ink/starship/starship
 [watchexec-cli]: https://github.com/watchexec/watchexec
+[rage]: https://github.com/str4d/rage
+[zellij]: https://github.com/zellij-org/zellij
 
 ### Inclusion Criteria
 
@@ -120,9 +124,9 @@ distrobox enter archX
   - [ ] Image for Ubuntu
   - [x] Image for Arch
 - [ ] More Rust tools
-  - [ ] Helix editor
-  - [ ] Rage
-  - [ ] Zellij
+  - [ ] Helix editor [[Issue](https://github.com/helix-editor/helix/issues/42)]
+  - [x] Rage
+  - [x] Zellij
   - [ ] tealdeer/tlrc (prefer distro package for autocompletions)
   - [ ] procs
   - [ ] rust uutils?
