@@ -38,10 +38,21 @@ Links: {[Distrobox install]} {[Toolbx install]}
 
 ```bash
 ## Create a container with any rusty-pets oxidised image (only need to do this once)
-distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbox:latest --name fedoraX-39
+distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbox:latest --name fedoraX
 
 ## Enter the created container (whenever you please)
-distrobox enter fedoraX-39
+distrobox enter fedoraX
+```
+
+You can also assign custom home directory for your pets, to keep separate dotfiles.
+
+```bash
+## Create a rusty-pets distrobox with separate home
+mkdir -p ~/Distroboxes/archX
+distrobox create --home ~/Distroboxes/archX --name archX --image ghcr.io/nain-f49ff806/rusty-pets/arch-oxidized.toolbox:latest
+
+## Enter the created container (whenever you please)
+distrobox enter archX2
 ```
 
 
