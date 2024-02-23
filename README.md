@@ -107,7 +107,7 @@ distrobox enter fedoraX-39
 - [ ] Popular distro triad
   - [x] Image for Fedora
   - [ ] Image for Ubuntu
-  - [ ] Image for Arch
+  - [x] Image for Arch
 - [ ] More Rust tools
   - [ ] Helix editor
   - [ ] Rage
