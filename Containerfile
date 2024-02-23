@@ -35,7 +35,7 @@ COPY customization/rusty-fedora/ /
 
 
 # --- Ubuntu ---
-FROM quay.io/toolbx/ubuntu-toolbox:23.10 as ubuntu-oxidized.toolbox
+FROM ubuntu:latest as ubuntu-oxidized.toolbox
 
 ARG NAME=ubuntu-oxidized.toolbox
 ARG VERSION=23.10
