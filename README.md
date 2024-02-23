@@ -112,6 +112,10 @@ distrobox enter fedoraX-39
   - [ ] Helix editor
   - [ ] Rage
   - [ ] Zellij
+  - [ ] tealdeer/tlrc (prefer distro package for autocompletions)
+  - [ ] procs
+  - [ ] rust uutils?
+  - [ ] navi?
   - [ ] ?
 - [ ] More aliases
   - [x] time?
