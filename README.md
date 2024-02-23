@@ -44,7 +44,7 @@ distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbo
 distrobox enter fedoraX
 ```
 
-You can also assign custom home directory for your pets, to keep separate dotfiles.
+You can also assign custom home directory for your pets, to keep separate dotfiles for example.
 
 ```bash
 ## Create a rusty-pets distrobox with separate home
@@ -52,7 +52,7 @@ mkdir -p ~/Distroboxes/archX
 distrobox create --home ~/Distroboxes/archX --name archX --image ghcr.io/nain-f49ff806/rusty-pets/arch-oxidized.toolbox:latest
 
 ## Enter the created container (whenever you please)
-distrobox enter archX2
+distrobox enter archX
 ```
 
 
