@@ -4,7 +4,7 @@ FROM rust:latest as builder
 RUN apt update && apt install -y cmake
 
 COPY useful-crates /useful-crates
-RUN cargo install $(cat useful-crates)
+RUN cargo install --locked $(cat useful-crates)
 RUN rm /useful-crates
 
 
