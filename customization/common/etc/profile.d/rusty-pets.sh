@@ -48,11 +48,8 @@ if [ ! -f ~/.config/rusty-pets/intro-message-seen ]; then
     echo "${RP_INTRO_MESSAGE}" | tee ~/.config/rusty-pets/intro-message-seen
 
 	# Tip regarding starship
-	if [ "${BASH_VERSION:-}" != "" ]; then
-        echo "Tip: To activate starship add the following line to your ~/.bashrc"
-		echo 'eval "$(starship init bash)"'
+	if [ "${BASH_VERSION:-}" != "" ] || [ "${ZSH_VERSION:-}" != "" ]; then
+		echo "Tip: To activate starship prompt, run the following"
+		echo ". /opt/rusty-pets/starship-activate"
 	fi
-    if [ "${ZSH_VERSION:-}" != "" ]; then
-		echo "Tip: To activate starship add the following line to your ~/.zshrc"
-		echo 'eval "$(starship init zsh)"'
 fi
