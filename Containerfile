@@ -1,10 +1,14 @@
 FROM rust:latest as builder
 
 # Required for building starship
-RUN apt update && apt install -y cmake
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt update && apt install -y cmake
 
 COPY useful-crates /useful-crates
-RUN cargo install --locked $(cat useful-crates)
+RUN \
+    --mount=type=cache,target=${CARGO_HOME}/git \
+    --mount=type=cache,target=${CARGO_HOME}/registry \
+    cargo install --locked $(cat useful-crates)
 RUN rm /useful-crates
 
 
