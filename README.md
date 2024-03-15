@@ -117,7 +117,7 @@ distrobox enter archX
 > Measurements can be falliable, let the spirit of the criteria guide us.
 
 
-## Todo / Wishlist
+## Further Todo / Wishlist
 
 - [ ] Popular distro triad
   - [x] Image for Fedora
@@ -127,6 +127,7 @@ distrobox enter archX
   - [ ] Helix editor [[Issue](https://github.com/helix-editor/helix/issues/42)]
   - [x] Rage
   - [x] Zellij
+  - [x] Starship with custom config
   - [ ] tealdeer/tlrc (prefer distro package for autocompletions)
   - [ ] procs
   - [ ] rust uutils?

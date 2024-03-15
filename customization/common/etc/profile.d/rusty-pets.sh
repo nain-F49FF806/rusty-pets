@@ -4,6 +4,10 @@
 
 [[ ":$PATH:" != *":/opt/cargo/bin:"* ]] && PATH="/opt/cargo/bin:${PATH}"
 
+## Rust starship path
+
+export STARSHIP_CONFIG=/etc/starship.toml
+
 # Rust aliases
 
 alias ls='eza'
