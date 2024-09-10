@@ -1,4 +1,4 @@
-FROM rust:latest as builder
+FROM rust:latest AS builder
 
 # Required for building starship
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -13,7 +13,7 @@ RUN rm /useful-crates
 
 
 # --- Fedora ---
-FROM registry.fedoraproject.org/fedora-toolbox:40 as fedora-oxidized.toolbox
+FROM registry.fedoraproject.org/fedora-toolbox:40 AS fedora-oxidized.toolbox
 
 ARG NAME=fedora-oxidized.toolbox
 ARG VERSION=40
@@ -26,7 +26,7 @@ LABEL com.github.containers.toolbox="true" \
       usage="$USAGE" \
       summary="$SUMMARY" \
       maintainer="nain <no-reply@you-are-on-your-own-for-now.alt>"
-LABEL org.opencontainers.image.description "${SUMMARY}. ${USAGE}"
+LABEL org.opencontainers.image.description="${SUMMARY}. ${USAGE}"
 
 # Pull in useful rust tools
 ## https://doc.rust-lang.org/stable/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
@@ -44,7 +44,7 @@ RUN rm -r /scripts
 
 
 # --- Ubuntu ---
-FROM quay.io/toolbx/ubuntu-toolbox:24.04 as ubuntu-oxidized.toolbox
+FROM quay.io/toolbx/ubuntu-toolbox:24.04 AS ubuntu-oxidized.toolbox
 
 ARG NAME=ubuntu-oxidized.toolbox
 ARG VERSION=24.04
@@ -57,7 +57,7 @@ LABEL com.github.containers.toolbox="true" \
       usage="$USAGE" \
       summary="$SUMMARY" \
       maintainer="nain <no-reply@you-are-on-your-own-for-now.alt>"
-LABEL org.opencontainers.image.description "${SUMMARY}. ${USAGE}"
+LABEL org.opencontainers.image.description="${SUMMARY}. ${USAGE}"
 
 # Pull in useful rust tools
 ## https://doc.rust-lang.org/stable/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
@@ -71,7 +71,7 @@ COPY customization/rusty-ubuntu/files/ /
 
 
 # --- Arch ---
-FROM quay.io/toolbx/arch-toolbox:latest as arch-oxidized.toolbox
+FROM quay.io/toolbx/arch-toolbox:latest AS arch-oxidized.toolbox
 
 ARG NAME=arch-oxidized.toolbox
 ARG VERSION=latest
@@ -84,7 +84,7 @@ LABEL com.github.containers.toolbox="true" \
       usage="$USAGE" \
       summary="$SUMMARY" \
       maintainer="nain <no-reply@you-are-on-your-own-for-now.alt>"
-LABEL org.opencontainers.image.description "${SUMMARY}. ${USAGE}"
+LABEL org.opencontainers.image.description="${SUMMARY}. ${USAGE}"
 
 # Pull in useful rust tools
 ## https://doc.rust-lang.org/stable/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
