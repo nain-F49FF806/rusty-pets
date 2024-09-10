@@ -38,6 +38,10 @@ ENV PATH=/opt/cargo/bin:$PATH
 COPY customization/common/files/ /
 COPY customization/rusty-fedora/files/ /
 
+COPY customization/rusty-fedora/scripts/ /scripts/
+RUN for i in /scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
+RUN rm -r /scripts
+
 
 # --- Ubuntu ---
 FROM quay.io/toolbx/ubuntu-toolbox:23.10 as ubuntu-oxidized.toolbox
