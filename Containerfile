@@ -35,8 +35,8 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH
 
-COPY customization/common/ /
-COPY customization/rusty-fedora/ /
+COPY customization/files/common/ /
+COPY customization/files/rusty-fedora/ /
 
 
 # --- Ubuntu ---
@@ -62,8 +62,8 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH 
 
-COPY customization/common/ /
-COPY customization/rusty-ubuntu/ /
+COPY customization/files/common/ /
+COPY customization/files/rusty-ubuntu/ /
 
 
 # --- Arch ---
@@ -89,5 +89,5 @@ COPY --from=builder /usr/local/cargo/bin/ /opt/cargo/bin/
 COPY --from=builder /usr/local/cargo/.crates.toml /usr/local/cargo/.crates2.json /opt/cargo/
 ENV PATH=/opt/cargo/bin:$PATH 
 
-COPY customization/common/ /
-COPY customization/rusty-arch/ /
+COPY customization/files/common/ /
+COPY customization/files/rusty-arch/ /
