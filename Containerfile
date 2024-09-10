@@ -13,10 +13,10 @@ RUN rm /useful-crates
 
 
 # --- Fedora ---
-FROM registry.fedoraproject.org/fedora-toolbox:39 as fedora-oxidized.toolbox
+FROM registry.fedoraproject.org/fedora-toolbox:40 as fedora-oxidized.toolbox
 
 ARG NAME=fedora-oxidized.toolbox
-ARG VERSION=39
+ARG VERSION=40
 ARG USAGE="This image is meant to be used with the toolbx or distrobox command"
 ARG SUMMARY="Rusted image based on Fedora Toolbox base container"
 LABEL com.github.containers.toolbox="true" \
@@ -44,10 +44,10 @@ RUN rm -r /scripts
 
 
 # --- Ubuntu ---
-FROM quay.io/toolbx/ubuntu-toolbox:23.10 as ubuntu-oxidized.toolbox
+FROM quay.io/toolbx/ubuntu-toolbox:24.04 as ubuntu-oxidized.toolbox
 
 ARG NAME=ubuntu-oxidized.toolbox
-ARG VERSION=23.10
+ARG VERSION=24.04
 ARG USAGE="This image is meant to be used with the toolbx or distrobox command"
 ARG SUMMARY="Rusted image based on Ubuntu Toolbox base container"
 LABEL com.github.containers.toolbox="true" \
