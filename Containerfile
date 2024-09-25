@@ -38,9 +38,9 @@ ENV PATH=/opt/cargo/bin:$PATH
 COPY customization/common/files/ /
 COPY customization/rusty-fedora/files/ /
 
-COPY customization/rusty-fedora/scripts/ /scripts/
-RUN for i in /scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
-RUN rm -r /scripts
+COPY customization/rusty-fedora/build-scripts/ /build-scripts/
+RUN for i in /build-scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
+RUN rm -r /build-scripts
 
 
 # --- Ubuntu ---
