@@ -1,7 +1,7 @@
 #!/bin/env bash
 
-RP_STARSHIP_INIT_BASH='eval "$(starship init bash)'
-RP_STARSHIP_INIT_ZSH='eval "$(starship init zsh)'
+RP_STARSHIP_INIT_BASH='eval "$(starship init bash)"'
+RP_STARSHIP_INIT_ZSH='eval "$(starship init zsh)"'
 if [ ! -f ~/.config/rusty-pets/starship-activated ]; then
 	echo "Activating starship prompt! ☄🌌️" 
     [ "${BASH_VERSION:-}" != "" ] && echo "${RP_STARSHIP_INIT_BASH}" >> ~/.bashrc
