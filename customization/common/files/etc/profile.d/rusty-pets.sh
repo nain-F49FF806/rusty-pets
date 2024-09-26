@@ -2,7 +2,7 @@
 
 # Rust binaries location, add to path
 
-[[ ":$PATH:" != *":/opt/cargo/bin:"* ]] && PATH="/opt/cargo/bin:${PATH}"
+[[ ":$PATH:" != *":/opt/rusty-pets/cargo/bin:"* ]] && PATH="/opt/rusty-pets/cargo/bin:${PATH}"
 
 ## Rust starship path
 
@@ -54,6 +54,6 @@ if [ ! -f ~/.config/rusty-pets/intro-message-seen ]; then
 	# Tip regarding starship
 	if [ "${BASH_VERSION:-}" != "" ] || [ "${ZSH_VERSION:-}" != "" ]; then
 		echo "Tip: To activate starship prompt, run the following"
-		echo ". /opt/rusty-pets/starship-activate"
+		echo ". /opt/rusty-pets/scripts/starship-activate"
 	fi
 fi
