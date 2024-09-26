@@ -38,6 +38,7 @@ ENV PATH=/opt/cargo/bin:$PATH
 COPY customization/common/files/ /
 COPY customization/rusty-fedora/files/ /
 
+COPY customization/common/build-scripts/ /build-scripts/
 COPY customization/rusty-fedora/build-scripts/ /build-scripts/
 RUN for i in /build-scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
 RUN rm -r /build-scripts
@@ -69,6 +70,11 @@ ENV PATH=/opt/cargo/bin:$PATH
 COPY customization/common/files/ /
 COPY customization/rusty-ubuntu/files/ /
 
+COPY customization/common/build-scripts/ /build-scripts/
+COPY customization/rusty-ubuntu/build-scripts/ /build-scripts/
+RUN for i in /build-scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
+RUN rm -r /build-scripts
+
 
 # --- Arch ---
 FROM quay.io/toolbx/arch-toolbox:latest AS arch-oxidized.toolbox
@@ -95,3 +101,8 @@ ENV PATH=/opt/cargo/bin:$PATH
 
 COPY customization/common/files/ /
 COPY customization/rusty-arch/files/ /
+
+COPY customization/common/build-scripts/ /build-scripts/
+COPY customization/rusty-arch/build-scripts/ /build-scripts/
+RUN for i in /build-scripts/*; do  if [ -r $i ]; then  . $i;  fi;  done
+RUN rm -r /build-scripts
