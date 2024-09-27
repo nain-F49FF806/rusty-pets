@@ -4,12 +4,12 @@ FROM rust:latest AS builder
 RUN --mount=type=cache,target=/var/cache/apt \
     apt update && apt install -y cmake
 
-COPY useful-crates /useful-crates
+COPY rusty-crates /rusty-crates
 RUN \
     --mount=type=cache,target=${CARGO_HOME}/git \
     --mount=type=cache,target=${CARGO_HOME}/registry \
-    cargo install --locked $(cat useful-crates)
-RUN rm /useful-crates
+    cargo install --locked $(cat rusty-crates)
+RUN rm /rusty-crates
 
 
 # --- Fedora ---
