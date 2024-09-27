@@ -2,3 +2,10 @@
 [container]
 symbol = '📦'
 style = 'bold #A52B00 dimmed'
+format = '[$symbol ]($style)'
+
+
+[os]
+disabled = false
+style = 'bold #A52B00 dimmed'
+format = "[($name oxidised )]($style)"
