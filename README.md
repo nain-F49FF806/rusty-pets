@@ -36,6 +36,18 @@ Links: {[Distrobox install]} {[Toolbx install]}
 
 ### Example usage
 
+#### Using provided _distrobox.ini_ files (recommended)
+
+```bash
+## Assemble container with latest rusty-pets oxidised image (only need to do this once)
+distrobox assemble create --file pets/ubuntu-oxidised.distrobox.ini
+
+## Enter the created container (whenever you please)
+distrobox enter ubuntu-oxidised
+```
+
+#### Using distrobox-create manually
+
 ```bash
 ## Create a container with any rusty-pets oxidised image (only need to do this once)
 distrobox create --image ghcr.io/nain-f49ff806/rusty-pets/fedora-oxidized.toolbox:latest --name fedoraX
@@ -48,12 +60,19 @@ You can also assign custom home directory for your pets, to keep separate dotfil
 
 ```bash
 ## Create a rusty-pets distrobox with separate home
-mkdir -p ~/Distroboxes/archX
-distrobox create --home ~/Distroboxes/archX --name archX --image ghcr.io/nain-f49ff806/rusty-pets/arch-oxidized.toolbox:latest
+mkdir -p ~/Distroboxes/storage/archX
+distrobox create --home ~/Distroboxes/storage/archX --name archX --image ghcr.io/nain-f49ff806/rusty-pets/arch-oxidized.toolbox:latest
 
 ## Enter the created container (whenever you please)
 distrobox enter archX
 ```
+
+> [!TIP]  
+> Terminal emulators like [Ptyxis] make entering your pet containers much easier.  
+> Alternatively, if your terminal emulator supports profiles, you can manually configure it  
+> to run the `distrobox enter ..` command at start of session.
+
+[Ptyxis]: https://flathub.org/apps/app.devsuite.Ptyxis
 
 
 ## What is included?
