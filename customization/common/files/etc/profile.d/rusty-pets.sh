@@ -51,9 +51,9 @@ if [ ! -f ~/.config/rusty-pets/intro-message-seen ]; then
 	mkdir -p ~/.config/rusty-pets
     echo "${RP_INTRO_MESSAGE}" | tee ~/.config/rusty-pets/intro-message-seen
 
-	# Tip regarding starship
+	# Tip regarding aliases/prompt
 	if [ "${BASH_VERSION:-}" != "" ] || [ "${ZSH_VERSION:-}" != "" ]; then
-		echo "Tip: To activate starship prompt, run the following"
-		echo ". /opt/rusty-pets/scripts/starship-activate"
+		echo "Tip: To activate some rusty features, you may need to run the following"
+		echo ". /opt/rusty-pets/scripts/bashrc-update"
 	fi
 fi

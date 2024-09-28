@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+RP_BASHRC_HOOK="if [ -e /run/.rustypetsenv ]; then source /etc/profile.d/rusty-pets.sh; fi"
+
+if grep -F "$RP_BASHRC_HOOK" ~/.bashrc; then
+    echo "Active rusty-pets hook found. Doing nothing." 
+else
+    echo "Adding rusty-pets hook to your ~/.bashrc" 
+    echo "$RP_BASHRC_HOOK" >> ~/.bashrc
+fi
