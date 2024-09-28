@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "source /etc/profile.d/rusty-pets.sh" | sudo tee -a /etc/skel/.bashrc
+echo "if [ -e /run/.rustypetsenv ]; then source /etc/profile.d/rusty-pets.sh; fi" | sudo tee -a /etc/skel/.bashrc
