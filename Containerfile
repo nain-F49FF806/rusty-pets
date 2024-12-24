@@ -13,10 +13,10 @@ RUN rm /rusty-crates
 
 
 # --- Fedora ---
-FROM registry.fedoraproject.org/fedora-toolbox:40 AS fedora-oxidized.toolbox
+FROM registry.fedoraproject.org/fedora-toolbox:41 AS fedora-oxidized.toolbox
 
 ARG NAME=fedora-oxidized.toolbox
-ARG VERSION=40
+ARG VERSION=41
 ARG USAGE="This image is meant to be used with the toolbx or distrobox command"
 ARG SUMMARY="Rusted image based on Fedora Toolbox base container"
 LABEL com.github.containers.toolbox="true" \
